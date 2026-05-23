@@ -12,10 +12,13 @@ const tiged = require("tiged");
 const targetDir = process.argv[2] || ".";
 
 // GitHub repo
-const emitter = tiged("github:AmitWick/nextjs-template", {
-  mode: "git",
-  verbose: true,
-});
+const emitter = tiged(
+  "https://github.com/AmitWick/create-nextjs-template.git",
+  {
+    mode: "git",
+    verbose: true,
+  },
+);
 
 async function run() {
   try {
