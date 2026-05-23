@@ -1,0 +1,9 @@
+git add .
+git commit -m "new update"
+
+npm version patch/minor/major
+
+git push
+git push --tags
+
+npm publish

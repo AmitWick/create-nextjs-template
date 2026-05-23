@@ -9,7 +9,7 @@
   "license": "ISC",
   "type": "module",
   "bin": {
-    "create-nextjs-template": "index.js"
+    "create-amit-nextjs-template": "index.js"
   },
   "dependencies": {
     "chalk": "^5.6.2",
