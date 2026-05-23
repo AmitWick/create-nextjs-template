@@ -4,9 +4,9 @@ import { execSync } from "child_process";
 import { createRequire } from "module";
 import ora from "ora";
 
-const tiged = require("tiged");
-
 const require = createRequire(import.meta.url);
+
+const tiged = require("tiged");
 
 // Get target folder
 const targetDir = process.argv[2] || ".";

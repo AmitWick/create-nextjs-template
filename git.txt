@@ -7,3 +7,6 @@ git push
 git push --tags
 
 npm publish
+
+file Name = .npmrc
+first line inside that file - //registry.npmjs.org/:_authToken=npm_xxxxxxxxxxxxxxx (token bypass 2FA)
