@@ -30,7 +30,6 @@ async function run() {
   try {
     // GitHub repo
     const emitter = tiged(`AmitWick/nextjs-template#${templateVersion}`, {
-      mode: "git",
       verbose: false,
     });
 
