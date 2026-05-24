@@ -25,9 +25,9 @@ if (!templateVersion) {
 const targetDir = process.argv[2] || ".";
 
 async function run() {
-  try {
-    const spinner = ora(`Downloading template ${templateVersion}...`).start();
+  const spinner = ora(`Downloading template ${templateVersion}...`).start();
 
+  try {
     // GitHub repo
     const emitter = tiged(`AmitWick/nextjs-template#${templateVersion}`, {
       mode: "git",
