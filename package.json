@@ -5,13 +5,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     }
   },
   "files": [
@@ -25,7 +24,7 @@
     "prepublishOnly": "npm run build"
   },
   "bin": {
-    "create-amit-nextjs-template": "./dist/index.cjs"
+    "create-amit-nextjs-template": "./dist/index.js"
   },
   "dependencies": {
     "@inquirer/prompts": "^8.5.2",
