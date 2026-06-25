@@ -2,18 +2,41 @@
   "name": "create-amit-nextjs-template",
   "version": "1.0.11",
   "description": "",
-  "main": "index.js",
-  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --banner.js '#!/usr/bin/env node'",
+    "prepublishOnly": "npm run build"
+  },
   "bin": {
-    "create-amit-nextjs-template": "index.js"
+    "create-amit-nextjs-template": "./dist/index.cjs"
   },
   "dependencies": {
+    "@inquirer/prompts": "^8.5.2",
     "chalk": "^5.6.2",
     "ora": "^9.4.0",
     "tiged": "^2.12.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.2"
   }
 }
